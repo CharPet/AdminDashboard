@@ -19,7 +19,7 @@ aside, a {
     color: white;  
     font-weight: bold; 
     grid-area: aside;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 a {
@@ -31,12 +31,12 @@ ul {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .dashboard-title {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
     padding: 2px;
     display: flex;
     justify-content: flex-end;
@@ -52,7 +52,7 @@ main {
 li p {
     padding: 5px;
     margin: 5px;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 
@@ -93,10 +93,6 @@ li p {
     grid-area: menutab2;
 }
 
-/* .dasboard-lists {
-    grid-area: aside;
-} */
-
 input {
     background-color: #e2e8f0;
     border: 1px solid #e2e8f0;
@@ -106,7 +102,7 @@ input {
 }
 
 .top-header span {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
 }
 
@@ -173,7 +169,7 @@ h2 {
 button {
     color: white;
     background-color: #1992d4;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     width: 120px;
     height: 50px;
@@ -200,37 +196,6 @@ article {
     background-color: #e2e8f0;
 }
 
-
-.main-content-titles p {
-    color: black;
-    font-size: 22px;
-    font-weight: 500;
-    margin-left: 20px;
-    margin-top: 0;
-    padding: 0;
-    background-color: #e2e8f0;
-    margin-top: 30px;
-}
-
-.main-content-titles {
-    background-color:#e2e8f0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.main-content-titles p:last-child {
-   margin-left: 330px;
-}
-
-article p {
-    color: black;
-    font-size: 22px;
-    font-weight: 500;
-    margin-left: 20px;
-    margin-top: 0;
-    padding: 0;
-}
-
 .card {
     padding: 5px;
     background-color: white;
@@ -241,15 +206,15 @@ article p {
     height: 200px;
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 15px auto;
 }
 
 .card-title {
     color:black;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-bottom: 5px;
 }
 
@@ -257,7 +222,8 @@ article p {
     color: #737373;
     font-size: 16px;
     margin-top: 0px;
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 0; 
 }
 
@@ -265,12 +231,12 @@ article p {
     display: flex;
     align-self: flex-end;
     gap: 30px;
-    margin: auto 20px auto 0;
+    margin: auto 20px auto auto;
 }    
 
 .main-stuff {
     display: grid;
-    grid-template-columns: 4fr 4fr 3fr;
+    grid-template-columns: 5fr 5fr 4fr;
     grid-template-areas:
     "cards cards tables";
 }
@@ -278,22 +244,48 @@ article p {
 .cards {
     grid-area: cards;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
+    "title1 empty"
     "card card"
     "card card"
     "card card";
 }
 
+.cards-title1{
+    grid-area: title1;
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 50px;
+    margin-top: 10px;
+    padding-top: 30px;
+}
+
+.empty {
+    grid-area: empty;
+}
+
 .tables {
     grid-area: tables;
     display: grid;
-    grid-template-rows: 1fr 60px 1fr;
+    grid-template-rows: auto 5fr auto 5fr;
     grid-template-areas: 
+    "title2"
     "table1"
-    "paragraph"
+    "title3"
     "table2";
+}
+
+.tables-title2 {
+    grid-area: title2;
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-top: 45px;
+    margin-bottom: 10px;
 }
 
 .table1 {
@@ -302,9 +294,16 @@ article p {
     background-color: white;
     border-radius: 10px;
     box-shadow: 3px 3px #ccd1d8;
-    margin-right: 20px;
+    padding: 0px 0;
 }
 
+.table-content1 p{
+    margin-bottom: 0;
+}
+
+.table-content1 p:first-child {
+    padding-top: 20px;
+}
 
 .table-content1 hr {
     border: 2px solid #ccd1d8;
@@ -314,9 +313,9 @@ article p {
 
 .table-content1-title {
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
-    margin: 30px 30px 0 30px;
+    margin-left: 30px; 
 }
 
 .table-content1-subtext {
@@ -325,9 +324,11 @@ article p {
     margin: 0 30px;
 }
 
-.table-content1-subtext:last-child {
-    margin-bottom: 30px;
+.table-content1 .table-content1-subtext:last-child {
+    padding-bottom: 30px;
 }
+
+
 
 .table2 {
     width: 350px;
@@ -351,7 +352,27 @@ article p {
     margin-left: 50px;
 }
 
-.text {
+.table2-subtext {
+    color: #737373;
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+}
+
+
+.tables-title3 {
+    grid-area: title3;
+    justify-self: start;
+    align-self: flex-end;
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+.table2-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -359,25 +380,3 @@ article p {
     padding-left: 10px; 
 }
 
-.table2-title {
-    color: black;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0;
-}
-
-.table2-subtext {
-    color: #737373;
-    font-size: 16px;
-    margin: 0;
-    display: flex;
-}
-
-
-.table2-header {
-    margin-top: 10px;
-    margin-right: 80px;
-    grid-area: paragraph;
-    justify-self: start;
-    align-self: flex-end;
-}
