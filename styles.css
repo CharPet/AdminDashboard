@@ -288,7 +288,7 @@ article {
     color: black;
     font-size: 22px;
     font-weight: 500;
-    margin-left: 3.125rem;
+    margin-left: 4.2rem;
     margin-top: 10px;
     padding-top: 30px;
 }
@@ -494,9 +494,9 @@ article {
         "tables"; 
     }
 
-    .cards {
+    /* .cards {
         gap
-    }
+    } */
 }
 
 
